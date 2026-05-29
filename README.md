@@ -1,1 +1,3 @@
-# yandex-reviews-jtbd-mvp
+# Deployment placeholder
+
+Repository initialization test by Codex.
