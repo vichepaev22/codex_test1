@@ -1,0 +1,45 @@
+name: Loop pilot task
+description: A bounded task for the Maker/Checker workflow
+title: "[Pilot] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: "Describe one observable change. Do not include secrets or private data."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What behavior is missing or incorrect?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Use a checklist of observable outcomes.
+      placeholder: |
+        - [ ] Observable result 1
+        - [ ] Observable result 2
+        - [ ] Tests cover the change
+        - [ ] python scripts/validate.py passes
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What must not change?
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risk class
+      options:
+        - Read-only or documentation
+        - Internal code change
+        - External side effect requiring approval
+        - Security-sensitive change
+    validations:
+      required: true
